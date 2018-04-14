@@ -6,7 +6,8 @@
     <script src="jsep.min.js"></script>
     <script src="numerax.js"></script>
     <link rel="stylesheet" href="katex.min.css">
-<script src="katex.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    <script src="katex.min.js"></script>
     <style>
         body {
             width: 500px;
@@ -54,20 +55,24 @@
         .katex {
             font-size: 1.6em !important;
         }
+        h1 {
+            font-family: 'Rock Salt', cursive;
+            font-size: 30pt;
+            margin-top: 0;
+            margin-bottom: 10pt;
+            color: rgb(71, 71, 71);
+        }
     </style>
 </head>
 <body onload="render( )">
     <h1>numeraX</h1>
     <textarea class="display" id="input" rows="6" onkeyup="render( )">f( x ) = lim( x -> 0,
            int( a, b, i * pi^-e ) )
-         / 
+         /
          sum( i = 0, x, i^3 )
-    
+
        -> x in B</textarea>
     <div class="display" id="katex-display"></div>
-
-    <a href="http://www.karyfoundation.org/">
-    <img src="github-full-horse.png" width="200"/>
     <script>
         function render ( ) {
             var text = document.getElementById('input').value;
